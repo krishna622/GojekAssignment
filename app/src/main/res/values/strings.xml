@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">GoJekAssignment</string>
+    <string name="trending">Trending</string>
+    <string name="sort_by_name">Sort by name</string>
+    <string name="sort_by_star">Sort by stars</string>
+    <string name="something_went_wrong">Something went wrong..</string>
+    <string name="no_internet_msg">An alien is probably blocking your signal.</string>
+    <string name="retry">RETRY</string>
+</resources>
