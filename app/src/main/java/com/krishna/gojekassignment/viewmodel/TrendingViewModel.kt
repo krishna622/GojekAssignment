@@ -23,11 +23,19 @@ class TrendingViewModel(private var application: Application) : ViewModel() {
     }
     fun getTrendingData() : LiveData<List<TrendDataItem>>? {
        if(trendingDataList == null)
-          trendingDataList = gitDataRepository.getTrendingData()
+          trendingDataList = gitDataRepository.getTrendingDataWithCacheEnable()
        return trendingDataList
     }
 
-    fun isLoading() : MutableLiveData<Boolean>{
-        return gitDataRepository.isLoading()
+    fun refreshTrendingData(){
+        trendingDataList = gitDataRepository.getTrendingData()
+    }
+
+    fun getLoadingStatus() : MutableLiveData<Boolean>{
+        return gitDataRepository.getLoadingStatus()
+    }
+
+    fun getIsDataNotAvailable() : MutableLiveData<Boolean>{
+        return gitDataRepository.getIsDataNotAvailable()
     }
 }

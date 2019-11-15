@@ -44,7 +44,7 @@ object RetrofitFactory{
         var request = chain.request()
 
         val cacheControl = CacheControl.Builder()
-            .maxStale(5, TimeUnit.MINUTES)
+            .maxStale(2, TimeUnit.MINUTES)
             .build()
 
         request = request.newBuilder()
